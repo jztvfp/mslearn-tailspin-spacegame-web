@@ -1,5 +1,5 @@
 pool:
-  vmImage: 'MyAgentPool'
+  name: 'MyAgentPool'
   demands:
     - npm
 
@@ -35,7 +35,7 @@ steps:
     command: 'restore'
     projects: '**/*.csproj'
 
-    
+
 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
